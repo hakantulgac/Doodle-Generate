@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="images/pencil.png">
+    <title>Drawing2Image</title>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <header>
+        <div>
+            <h1>DRAWING2IMAGE</h1>
+        </div>
+        <div class="theme-field">
+            <img id="theme-toggle" src="images/sun.png" alt="">
+        </div>
+    </header>
+    <div id="canvas-container">
+        <div class="content">
+            <div class="content-left">
+                <div class="draw-field">
+                    <canvas id="canvas"></canvas>
+                </div>
+                <div class="options">
+                    <button id="save-button">Predict</button>
+                    <button id="clear-button">
+                        <img id="broom-img" src="images/broom_light.png" alt="">
+                    </button>
+                </div>
+            </div>
+            <div id="content-process">
+                <img id="process-image" src="images/processing.gif" alt="">
+            </div>
+            <div id="content-right">
+                <img id="generated-image" src="" alt="">
+            </div>
+        </div>
+        
+
+        <div id="loader"></div>
+        <div id="result"></div>
+        <div id="generate-field">
+            <button id="generate-button">Generate Image</button>
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

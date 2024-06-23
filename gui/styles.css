@@ -1,0 +1,182 @@
+:root {
+    --background-color: #212121;
+    --text-color: #ffffff;
+    --button-background: #0056b3;
+    --button-hover: #007bff;
+    --clear-button-background: rgb(179, 51, 51);
+    --clear-button-hover: rgb(239, 93, 93);
+    --canvas-background: #171717;
+    --header-background: #171717;
+    --theme-field: #212121;
+}
+
+body.light-mode {
+    --background-color: #E7E9EB;
+    --text-color: #000000;
+    --button-background: #2d92ff;
+    --button-hover: #007bff;
+    --clear-button-background: rgb(246, 128, 128);
+    --clear-button-hover: rgb(239, 93, 93);
+    --canvas-background: #ffffff;
+    --header-background: #ffffff;
+    --theme-field: #E7E9EB;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    overflow: hidden;
+}
+
+header {
+    height: 80px;
+    margin: 40px -8px;
+    background-color: var(--header-background);
+    margin-top: -7px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 50px;
+}
+
+.canvas-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.draw-field {
+    width: 500px;
+    height: 500px;
+    position: relative;
+}
+
+.options {
+    display: flex;
+    justify-content: space-between;
+    width: 500px;
+    margin-top: 10px;
+}
+
+#generate-button,
+#save-button,
+#clear-button {
+    padding: 10px 20px;
+    color: var(--text-color);
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    width: calc(50% - 5px);
+}
+
+#generate-button,
+#save-button {
+    background-color: var(--button-background);
+}
+
+#clear-button {
+    background-color: var(--clear-button-background);
+}
+
+#generate-button:hover,
+#save-button:hover {
+    background-color: var(--button-hover);
+}
+
+#clear-button:hover {
+    background-color: var(--clear-button-hover);
+}
+
+img {
+    height: 32px;
+}
+
+#result {
+    text-align: center;
+}
+
+#generate-field {
+    text-align: center;
+    margin: 20px auto;
+    width: 500px;
+    visibility: hidden;
+}
+
+#canvas {
+    width: 500px;
+    height: 500px;
+    background-color: var(--canvas-background);
+    cursor: url('images/pencil.png') 1 30, crosshair;
+    border-radius: 20px;
+}
+
+.theme-field {
+    cursor: pointer;
+    height: 50px;
+    width: 50px;
+    text-align: center;
+    align-content: center;
+    border-radius: 100%;
+}
+
+.theme-field:hover {
+    background-color: var(--theme-field);
+}
+
+#loader {
+    border: 16px solid #f3f3f3;
+    border-radius: 50%;
+    border-top: 16px solid blue;
+    border-right: 16px solid green;
+    border-bottom: 16px solid red;
+    border-left: 16px solid pink;
+    width: 50px;
+    height: 0px;
+    -webkit-animation: spin 2s linear infinite;
+    animation: spin 2s linear infinite;
+    margin: 20px auto;
+    visibility: hidden;
+  }
+  
+  @-webkit-keyframes spin {
+    0% { -webkit-transform: rotate(0deg); }
+    100% { -webkit-transform: rotate(360deg); }
+  }
+  
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+
+  .content{
+    display: flex;
+    justify-content: center;
+    gap: 100px;
+  }
+
+  #generated-image{
+    height: 564px;
+    width: 564px;
+    border-radius: 20px;
+  }
+
+  #process-image{
+    height: 564px;
+    width: 564px;
+    border-radius: 20px;
+  }
+
+  #content-right{
+    display: none;
+  }
+
+  #content-process{
+    display: none;
+  }
+
+  h1 {
+    font-family: cursive;
+  }
+
